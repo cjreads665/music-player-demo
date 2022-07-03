@@ -3,7 +3,7 @@ import manmusic from '../../images/man-music.svg'
 
 const Header = () => {
   return (
-    <section className='bg-[#e092b7] h-[12rem] overflow-hidden w-full flex justify-between'>
+    <section className='bg-[#e092b7] h-[12rem] overflow-hidden w-full md:w-[90%] flex justify-between'>
     <div>
     <img src={manmusic} alt="man-listening-to-music" className='w-[100%]' />
     </div>
