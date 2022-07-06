@@ -1,19 +1,22 @@
 import axios from 'axios'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState,useRef } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
+import SwiperCore, { Navigation,Pagination } from 'swiper';
 import { released } from '../api/api'
+import "swiper/css";
+import "swiper/css/navigation";
+
+
+SwiperCore.use([Navigation,Pagination])
 
 const Sections = (props:any) => {
     const {api} = props;
-    console.log(api);
     
     const [list,setList] = useState(null)
   const fetchReleased = async()=>{
     try{
       const {data:{tracks}} = await axios.request(api)
       let list = tracks.map((obj: any)=>{
-        console.log(obj);
-        
         return <div key={obj.key}>
         <SwiperSlide>
           <div className='flex flex-col items-center'>
@@ -31,16 +34,16 @@ const Sections = (props:any) => {
       console.log(error)
     }
   }
+
   useEffect(()=>{
     fetchReleased()
-
     
   },[])
   return (
-    <section className='w-[100%] md:w-[90%] overflow-x-hidden'>
+    <section className='w-[100%] md:w-[90%] overflow-x-hidden relative'>
     <div className=' m-4 w-full '>
-    <h4 className='uppercase mr-[10rem] relative tracking-[0.1rem] text-xs font-bold text-gray-300' >Released this week <hr className='absolute w-[100%] top-2.5 left-[12rem]' /></h4>
-        
+    <h4 className='uppercase mr-[10rem] relative tracking-[0.1rem] text-xs font-bold text-gray-400' >{props.title} <hr className='absolute w-[100%] top-2 left-[12rem] border border-gray-300' /></h4>
+
     </div>
        
           <Swiper
@@ -52,10 +55,11 @@ const Sections = (props:any) => {
                 slidesPerView: 9,
               },
             }}
+            navigation
+            pagination
           >
             {list}
           </Swiper>
-    
         </section>
   )
 }

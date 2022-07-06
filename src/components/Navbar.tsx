@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 const Navbar = (props:any) => {
     const {open} = props
   return (
-    <nav className={`float-left ${open? 'block absolute' : 'hidden'} md:w-[10%] md:pl-[10rem]  md:block w-[50%] transition-all bg-[#323fd1] h-[100vh]`}>
+    <nav className={`float-left ${open? 'block absolute' : 'hidden'} md:w-[10%] md:p-[5rem] md:flex justify-center items-center z-[10] md:block w-[50%] transition-all bg-[#323fd1] h-[100vh]`}>
     <ul className='h-[50%] flex flex-col justify-evenly items-center mt-[49%] text-white '>
              <li>
                <Link to="/">Home</Link>

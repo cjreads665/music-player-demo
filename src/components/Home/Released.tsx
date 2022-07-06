@@ -3,11 +3,15 @@ import { released } from '../../api/api'
 import axios from 'axios'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
+import Sections from '../Sections';
 const Released = () => {
+  const props={
+    api: released,
+    title: 'RELEASED THIS WEEK'
+   }
   return (
-    <section className='w-[100%] md:w-[90%] overflow-x-hidden'>
-
-
+    <section className=''>
+<Sections {...props} />
     </section>
   )
 }

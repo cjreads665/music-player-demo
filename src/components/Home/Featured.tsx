@@ -6,7 +6,8 @@ import { Pagination } from 'swiper'
 import Sections from '../Sections'
 const Featured = () => {
  const props={
-  api: featured
+  api: featured,
+  title: 'featured playlists'
  }
   return (
    <section className=''>
