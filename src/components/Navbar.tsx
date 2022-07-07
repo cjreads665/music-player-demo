@@ -6,7 +6,7 @@ const Navbar = (props: any) => {
     <nav
       className={`float-left ${
         open ? "block absolute" : "hidden"
-      } md:w-[10%] md:p-[5rem] md:flex justify-center items-center z-[10] md:block w-[50%] transition-all bg-[#323fd1] min-h-[100vh]`}
+      } md:w-[10%] md:p-[5rem] md:flex justify-center items-center z-[10] md:block w-[50%] transition-all bg-[#323fd1] max-h-[100vh]`}
     >
       <ul className="h-[50%] flex flex-col justify-evenly items-center mt-[49%] text-white ">
         <li>

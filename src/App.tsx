@@ -12,7 +12,7 @@ function App() {
     open:open
   }
   return (
-    <div className='flex min-h-screen w-full'>
+    <div className='flex min-h-screen w-full overflow-hidden'>
     <BrowserRouter>
     <i 
     onClick={()=>setOpen(!open)}
