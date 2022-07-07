@@ -4,7 +4,7 @@ import Released from './Released'
 
 const Body = () => {
   return (
-    <div className='p-6'>
+    <div className='p-6 min-h-screen'>
         <Released/>
         <Featured/>
     </div>

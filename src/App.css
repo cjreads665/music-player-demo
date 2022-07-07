@@ -6,10 +6,8 @@
 .swiper-button-next:after,.swiper-button-prev:after{
   position: absolute;
   bottom: -3.5rem;
-  color: blue;
+  color: blue !important;
   font-size: 1.5rem !important;
   font-weight: 900 !important;
 }
-.swiper-button-prev:after{
-  right: -80rem;
-}
+
