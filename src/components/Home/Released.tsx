@@ -7,7 +7,8 @@ import Sections from '../Sections';
 const Released = () => {
   const props={
     api: released,
-    title: 'RELEASED THIS WEEK'
+    title: 'RELEASED THIS WEEK',
+    list : 'released'
    }
   return (
     <section className=''>

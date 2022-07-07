@@ -7,7 +7,8 @@ import Sections from '../Sections'
 const Featured = () => {
  const props={
   api: featured,
-  title: 'featured playlists'
+  title: 'featured playlists',
+  list : 'featured'
  }
   return (
    <section className=''>

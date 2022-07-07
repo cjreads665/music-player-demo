@@ -38,11 +38,21 @@ const Sections = (props: any) => {
                   className="absolute top-0 right-0 bg-blue-600 p-1 px-2 rounded-md"
                   onClick={() =>{
                     if(api==featured){
-                      console.log(obj);
                       dispatch(addToPlaylist(obj))
                     }
                     else{
                       dispatch(addToFavs(obj))
+                    }
+                    if(localStorage.getItem(props.list)){
+                      //if list exists
+                 let prev = JSON.parse(localStorage.getItem(props.list) || '{}')
+                 prev.push(obj)
+                 localStorage.setItem(props.list,JSON.stringify(prev))
+                 
+                    }
+                    else{
+                      //if list does not exist
+                      localStorage.setItem(props.list,JSON.stringify([obj]))
                     }
                   }}
                 >
