@@ -7,10 +7,10 @@ const Header = () => {
     <div>
     <img src={manmusic} alt="man-listening-to-music" className='w-[100%]' />
     </div>
-    <div className='text-right p-2 mx-[20%]'>
-    <h1 className='font-black text-white leading-tight text-4xl'>Your favourite tunes</h1>
-    <h2 className='font-black text-white leading-tight text-xl'>All
-     <i className="fa-solid fa-sun text-yellow-500 ml-2"></i> and all <i className="fa-solid fa-moon"></i></h2>
+    <div className='text-right p-2 mx-[20%] mt-6'>
+    <h1 className='font-black text-white leading-tight text-5xl'>Your favourite tunes</h1>
+    <h2 className='font-black text-white leading-tight text-2xl'>All
+     <i className="fa-solid fa-sun text-yellow-500 ml-2"></i> and all <i className="fa-solid fa-moon text-black "></i></h2>
     </div>
   </section>
   )
