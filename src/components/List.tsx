@@ -2,7 +2,7 @@ import React, { Children } from 'react'
 
 const List = (props:any) => {
     
-    const play = JSON.parse(localStorage.getItem(props.props.list))
+    const play = localStorage.getItem(props.props.list)? JSON.parse(localStorage.getItem(props.props.list) ||'{}') : []
     
     
   const handleRemove = (i:number)=>{
