@@ -2,8 +2,8 @@ import React, { Children } from 'react'
 
 const List = (props:any) => {
     
-    const play = JSON.parse(localStorage.getItem(props.props.list) || '{}')
-    console.log(play);
+    const play = JSON.parse(localStorage.getItem(props.props.list))
+    
     
   const handleRemove = (i:number)=>{
      for(let index=0;index<play.length;index++){
@@ -14,10 +14,10 @@ const List = (props:any) => {
   }
     return (
         <div>
-        <h1 className='text-6xl m-6 font-black'>Your Favourite Songs </h1>
+        <h1 className='text-6xl m-6 font-black'>{props.props.title} </h1>
       <div className='grid grid-cols-1 md:grid-cols-4'>
         {
-            play=={}? <div>fdsfd</div>:
+            play=={} || play==null || play.length==0? <div>Add something fun here!</div>:
         Children.toArray(play.map((obj: any,i:number)=>{
           return <div className="flex flex-col items-center relative">
                   <button
